@@ -34,8 +34,14 @@ const director1: Director = {
 console.log(director1);
 
 // Task 3: printTeacher function
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName} ${lastName}`;
+// Task 3: printTeacher
+interface printTeacher {
+  (teacher: { firstName: string; lastName: string }): string;
 }
 
-console.log(printTeacher("John", "Doe"));
+const printTeacher: printTeacher = ({ firstName, lastName }) => {
+  return `${firstName[0]}. ${lastName}`;
+};
+
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // Output: J. Doe
+
