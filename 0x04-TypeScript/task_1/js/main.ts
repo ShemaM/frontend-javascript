@@ -35,12 +35,11 @@ console.log(director1);
 
 
 // Interface for the printTeacher function
-
 interface printTeacherFunction {
     (teacher: { firstName: string; lastName: string }): string;
 }
 
-// Function implementation that accepts an object
-const printTeacher: printTeacherFunction = (teacher: { firstName: string; lastName: string }): string => {
-    return `${teacher.firstName.charAt(0)}. ${teacher.lastName}`;
+// Function implementation with destructuring
+const printTeacher: printTeacherFunction = ({ firstName, lastName }: { firstName: string; lastName: string }): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
 };
