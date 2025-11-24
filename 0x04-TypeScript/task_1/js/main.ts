@@ -39,7 +39,7 @@ interface printTeacherFunction {
     (teacher: { firstName: string; lastName: string }): string;
 }
 
-// Function implementation with destructuring
-const printTeacher: printTeacherFunction = ({ firstName, lastName }: { firstName: string; lastName: string }): string => {
-    return `${firstName.charAt(0)}. ${lastName}`;
-};
+// Function implementation using function declaration
+function printTeacher(teacher: { firstName: string; lastName: string }): string {
+    return `${teacher.firstName.charAt(0)}. ${teacher.lastName}`;
+}
