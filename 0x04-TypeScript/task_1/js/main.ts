@@ -32,11 +32,11 @@ const director1: Director = {
 console.log(director1);
 
 // Task 3: printTeacher
-interface printTeacherFunction {
+interface printTeacher {
   (teacher: { firstName: string; lastName: string }): string;
 }
 
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+const printTeacher: printTeacher= ({ firstName, lastName }) => {
   return `${firstName[0]}. ${lastName}`;
 };
 
