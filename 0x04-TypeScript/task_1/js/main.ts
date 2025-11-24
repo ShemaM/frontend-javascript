@@ -4,11 +4,12 @@ interface Teacher{
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
-    [key: string]: any; //possibility of adding a new property
+    [key: string]: any;
+
 }
 const teacher1: Teacher = {
     firstName: "Alice",
-    lastName: "Johnson",    
+    lastName: "Johnson",
     fullTimeEmployee: true,
     location: "Chicago",
     contract: false
