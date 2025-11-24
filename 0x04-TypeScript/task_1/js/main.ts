@@ -43,3 +43,37 @@ interface printTeacherFunction {
 function printTeacher(teacher: { firstName: string; lastName: string }): string {
     return `${teacher.firstName.charAt(0)}. ${teacher.lastName}`;
 }
+
+
+// Interface for the StudentClass constructor
+interface StudentConstructor {
+    new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+// Interface for the StudentClass instance methods
+interface StudentClassInterface {
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+// Implementation of the StudentClass
+class StudentClass implements StudentClassInterface {
+    private firstName: string;
+    private lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return "Currently working";
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
+
+// Export for testing
+export { StudentClass, StudentConstructor, StudentClassInterface };
